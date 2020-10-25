@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30615.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch07Ex01TracePoints", "Ch07Ex01TracePoints\Ch07Ex01TracePoints.csproj", "{B76AB986-9E20-44F0-95CC-839081423768}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B76AB986-9E20-44F0-95CC-839081423768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B76AB986-9E20-44F0-95CC-839081423768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B76AB986-9E20-44F0-95CC-839081423768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B76AB986-9E20-44F0-95CC-839081423768}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E25B6D9-6D4A-4C2E-8DBC-989FEA123EF7}
+	EndGlobalSection
+EndGlobal
