@@ -1,1 +1,1 @@
-Chapter 8
+Chapter 8: Introduction to Object-Oriented Programming
