@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Ch11CardLib">
+      <HintPath>..\..\Ch11CardLib\Ch11CardLib\bin\Debug\net5.0\Ch11CardLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
