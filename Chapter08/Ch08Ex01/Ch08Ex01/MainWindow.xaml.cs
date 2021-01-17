@@ -29,6 +29,9 @@ namespace Ch08Ex01
         {
             ((Button)sender).Content = "Clicked!";
             Button newButton = new Button();
+            newButton.Width = 100;
+            newButton.Height = 50;
+            newButton.VerticalAlignment = VerticalAlignment.Top;
             newButton.Content = "New Button! ";
             newButton.Margin = new Thickness(10, 10, 200, 200);
             newButton.Click += newButton_Click;
