@@ -7,11 +7,8 @@ namespace Ch12Ex01
     {
         public double? R = null;
         public double? Theta = null;
-        public double? ThetaRadians
-        {
-            // Convert degrees to radians.
-            get { return (Theta * Math.PI / 180.0); }
-        }
+        public double? ThetaRadians => (Theta * Math.PI / 180.0);
+
         public Vector(double? r, double? theta)
         {
             // Normalize.
