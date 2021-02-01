@@ -39,7 +39,7 @@ namespace Ch12CardLib
         public object Clone() => MemberwiseClone();
         public override string ToString() => "The " + rank + " of " + suit + "s";
 
-        public static bool operator ==(Card card1, Card card2) => (card1.suit == card2.suit) && (card1.rank == card2.rank);
+        public static bool operator ==(Card card1, Card card2) => (card1?.suit == card2?.suit) && (card1?.rank == card2?.rank);
 
         public static bool operator !=(Card card1, Card card2) => !(card1 == card2);
 
