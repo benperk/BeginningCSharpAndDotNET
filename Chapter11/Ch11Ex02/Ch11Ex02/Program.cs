@@ -6,7 +6,7 @@ namespace Ch11Ex02
     {
         static void Main(string[] args)
         {
-            Animals animalCollection = new Animals();
+            AnimalCollection animalCollection = new AnimalCollection();
             animalCollection.Add(new Cow("Donna"));
             animalCollection.Add(new Chicken("Mary"));
             foreach (Animal myAnimal in animalCollection)
