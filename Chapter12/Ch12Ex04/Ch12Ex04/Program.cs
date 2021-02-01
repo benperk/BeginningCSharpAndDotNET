@@ -18,7 +18,7 @@ namespace Ch12Ex04
             {
                 if (cow is SuperCow)
                 {
-                    (cow as SuperCow).Fly();
+                    (cow as SuperCow)?.Fly();
                 }
             }
             Console.ReadKey();
