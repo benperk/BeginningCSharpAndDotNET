@@ -6,7 +6,7 @@ namespace Ch12Ex03
     {
         static void Main(string[] args)
         {
-            Vectors route = new Vectors();
+            VectorList route = new VectorList();
             route.Add(new Vector(2.0, 90.0));
             route.Add(new Vector(1.0, 180.0));
             route.Add(new Vector(0.5, 45.0));
@@ -18,7 +18,7 @@ namespace Ch12Ex03
             Console.WriteLine(route.Sum());
             Predicate<Vector> searcher =
                new Predicate<Vector>(VectorDelegates.TopRightQuadrant);
-            Vectors topRightQuadrantRoute = new Vectors(route.FindAll(searcher));
+            VectorList topRightQuadrantRoute = new VectorList(route.FindAll(searcher));
             Console.WriteLine(topRightQuadrantRoute.Sum());
             Console.ReadKey();
         }
