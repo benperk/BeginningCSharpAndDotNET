@@ -12,7 +12,6 @@ namespace Ch11Ex01
             get { return name; }
             set { name = value; }
         }
-        public Animal() => name = "The animal with no name";
 
         public Animal(string newName) => name = newName;
 
