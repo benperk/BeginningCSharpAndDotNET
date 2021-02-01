@@ -15,7 +15,7 @@ namespace Ch11Ex01
             animalArray[1] = new Chicken("Noa");
             foreach (Animal myAnimal in animalArray)
             {
-                Console.WriteLine($"New {myAnimal.ToString()} object added to Array" +
+                Console.WriteLine($"New {myAnimal} object added to Array" +
                                   $" collection, Name = {myAnimal.Name}");
             }
             Console.WriteLine($"Array collection contains {animalArray.Length} objects.");
@@ -30,7 +30,7 @@ namespace Ch11Ex01
             animalArrayList.Add(new Chicken("Andrea"));
             foreach (Animal myAnimal in animalArrayList)
             {
-                Console.WriteLine($"New {myAnimal.ToString()} object added to ArrayList " +
+                Console.WriteLine($"New {myAnimal} object added to ArrayList " +
                                   $" collection, Name = {myAnimal.Name}");
             }
             Console.WriteLine($"ArrayList collection contains {animalArrayList.Count} "
