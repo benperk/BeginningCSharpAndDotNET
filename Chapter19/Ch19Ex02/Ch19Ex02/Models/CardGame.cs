@@ -4,6 +4,9 @@ using System.Text;
 
 namespace BeginningCSharp
 {
+    /// <summary>
+    /// Class that describes a single card
+    /// </summary>
     public class Card : ICloneable
     {
         public readonly Rank rank;
