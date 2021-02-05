@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ch18CardLibStandard</name>
+    </assembly>
+    <members>
+        <member name="T:BeginningCSharp.Card">
+            <summary>
+            Class that describes a single card
+            </summary>
+        </member>
+    </members>
+</doc>
