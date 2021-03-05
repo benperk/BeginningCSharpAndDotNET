@@ -1,11 +1,17 @@
 <books>
-  <book code="096689">
+  <book code="978-1119795780">
     <title>Beginning C# and .NET</title>
-    <author>Benamin Perkins and Jon Reid</author>
-    <code>096689</code>
+    <author>Benjamin Perkins and Jon Reid</author>
+    <code>978-1119795780</code>
   </book>
-  <book code="162132">
+  <book code="978-1118162132">
     <title>Beginning XML</title>
     <author>Joe Fawcett et al</author>
+  </book>
+  <book>
+    <!--the Professional edition-->
+    <title>Professional C# 7 and .NET Core</title>
+    <author>Christian Nagel</author>
+    <code>978-1119449270</code>
   </book>
 </books>

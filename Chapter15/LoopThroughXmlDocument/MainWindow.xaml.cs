@@ -21,7 +21,7 @@ namespace LoopThroughXmlDocument
     /// </summary>
     public partial class MainWindow : Window
     {
-        private const string booksFile = @"C:\BeginningCSharp7\Chapter21\XML and Schema\Books.xml";
+        private const string booksFile = @"C:\BeginningCSharpAndDotNet\Chapter15\XML and Schemas\Books.xml";
 
         public MainWindow()
         {
@@ -100,10 +100,10 @@ namespace LoopThroughXmlDocument
             XmlElement newTitle = document.CreateElement("title");
             XmlElement newAuthor = document.CreateElement("author");
             XmlElement newCode = document.CreateElement("code");
-            XmlText title = document.CreateTextNode("Beginning Visual C# 2012");
-            XmlText author = document.CreateTextNode("Karli Watson et al");
-            XmlText code = document.CreateTextNode("314418");
-            XmlComment comment = document.CreateComment("The previous edition");
+            XmlText title = document.CreateTextNode("Professional C# 7 and .NET Core");
+            XmlText author = document.CreateTextNode("Christian Nagel");
+            XmlText code = document.CreateTextNode("978-1119449270");
+            XmlComment comment = document.CreateComment("the Professional edition");
 
 
             // Insert the elements.
@@ -140,28 +140,6 @@ namespace LoopThroughXmlDocument
                 // Save the document back to disk.
                 document.Save(booksFile);
             }
-        }
-        private void buttonConvertXMLtoJSON_Click(object sender, RoutedEventArgs e)
-        {
-            // Load the XML document.
-            XmlDocument document = new XmlDocument();
-
-            document.Load(booksFile);
-
-            string json = Newtonsoft.Json.JsonConvert.SerializeXmlNode(document);
-
-            textBlockResults.Text = json;
-
-            System.IO.File.AppendAllText(@"C:\BeginningCSharp7\Chapter21\XML and Schemas\Books.json", json);
-        }
-        private void buttonConvertJSONtoXML_Click(object sender, RoutedEventArgs e)
-        {
-            // Load the json document.
-            string json = System.IO.File.ReadAllText(@"C:\BeginningCSharp7\Chapter21\XML and Schemas\Books.json");
-
-            XmlDocument document = Newtonsoft.Json.JsonConvert.DeserializeXmlNode(json);
-
-            textBlockResults.Text = FormatText(document.DocumentElement as XmlNode, "", "");
         }
 
     }
