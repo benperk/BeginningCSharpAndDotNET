@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeginningCSharpAndDotNET_16_9_MultiLevelOrdering", "BeginningCSharpAndDotNET_16_9_MultiLevelOrdering.csproj", "{FFDDE5B4-2101-40D6-9C55-3270650617BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFDDE5B4-2101-40D6-9C55-3270650617BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFDDE5B4-2101-40D6-9C55-3270650617BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFDDE5B4-2101-40D6-9C55-3270650617BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFDDE5B4-2101-40D6-9C55-3270650617BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6E64F74-E48F-45DA-A837-3ED5A2F72D28}
+	EndGlobalSection
+EndGlobal
