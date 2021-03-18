@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer;
 using System;
 using System.Linq;
 using System.ComponentModel.DataAnnotations;
@@ -6,18 +7,22 @@ using static System.Console;
 
 namespace BeginningCSharpAndDotNet_17_1_CodeFirstDatabase
 {
-        public class Book
+    public class Book
+    {
+        public string Title { get; set; }
+        public string Author { get; set; }
+        [Key] public int Code { get; set; }
+    }
+    public class BookContext : DbContext
+    {
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            public string Title { get; set; }
-            public string Author { get; set; }
-            [Key] public int Code { get; set; }
+            optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;Database=Books;Integrated Security=True");
         }
-        public class BookContext : DbContext
-        {
-            public DbSet<Book> Books { get; set; }
-        }
-        class Program
-        {
+        public DbSet<Book> Books { get; set; }
+    }
+    class Program
+    {
         static void Main(string[] args)
         {
             using (var db = new BookContext())
@@ -25,7 +30,7 @@ namespace BeginningCSharpAndDotNet_17_1_CodeFirstDatabase
                 Book book1 = new Book
                 {
                     Title = "Beginning C# and .NET",
-                    Author = "Perkins, Reid";
+                    Author = "Perkins, Reid"
                 };
                 db.Books.Add(book1);
                 Book book2 = new Book
