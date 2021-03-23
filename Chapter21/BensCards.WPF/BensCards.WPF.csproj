@@ -6,4 +6,22 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Images\Banner.png" />
+    <None Remove="Images\base_floppydisk_32.png" />
+    <None Remove="Images\Clubs.png" />
+    <None Remove="Images\Diamonds.png" />
+    <None Remove="Images\Hearts.png" />
+    <None Remove="Images\Spades.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Banner.png" />
+    <Resource Include="Images\base_floppydisk_32.png" />
+    <Resource Include="Images\Clubs.png" />
+    <Resource Include="Images\Diamonds.png" />
+    <Resource Include="Images\Hearts.png" />
+    <Resource Include="Images\Spades.png" />
+  </ItemGroup>
+
 </Project>
