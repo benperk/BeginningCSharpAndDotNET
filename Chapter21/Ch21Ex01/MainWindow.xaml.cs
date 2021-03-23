@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Ch14Ex01
+namespace Ch21Ex01
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
