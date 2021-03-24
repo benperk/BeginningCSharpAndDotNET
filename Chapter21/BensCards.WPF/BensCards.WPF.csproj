@@ -16,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Chapter13\Ch13CardLib\Ch13CardLib\Ch13CardLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Images\Banner.png" />
     <Resource Include="Images\base_floppydisk_32.png" />
     <Resource Include="Images\Clubs.png" />
