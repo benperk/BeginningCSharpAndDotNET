@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Windows;
 using System.Xml.Serialization;
+using Ch13CardLib;
 
 namespace BensCards.WPF
 {

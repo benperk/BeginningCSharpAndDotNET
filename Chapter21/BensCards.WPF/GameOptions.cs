@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using Ch13CardLib;
+using System.Windows.Input;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace BensCards.WPF
 {
@@ -13,6 +17,11 @@ namespace BensCards.WPF
         private ComputerSkillLevel computerSkill = ComputerSkillLevel.Dumb;
         private ObservableCollection<string> playerNames = new ObservableCollection<string>();
         public List<string> SelectedPlayers { get; set; } = new List<string>();
+
+        public static RoutedCommand OptionsCommand = new RoutedCommand("Show Options",
+typeof(GameOptions), new InputGestureCollection(new List<InputGesture>
+{ new KeyGesture(Key.O, ModifierKeys.Control) }));
+
 
         public int NumberOfPlayers
         {
@@ -68,13 +77,28 @@ namespace BensCards.WPF
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-    }
 
-    [Serializable]
-    public enum ComputerSkillLevel
+        public void Save()
+        {
+            using (var stream = File.Open("GameOptions.xml", FileMode.Create))
+            {
+                var serializer = new XmlSerializer(typeof(GameOptions));
+                serializer.Serialize(stream, this);
+            }
+        }
+        public static GameOptions Create()
     {
-        Dumb,
-        Good,
-        Cheats
+            if (File.Exists("GameOptions.xml"))
+            {
+                using (var stream = File.OpenRead("GameOptions.xml"))
+                {
+                    var serializer = new XmlSerializer(typeof(GameOptions));
+                    return serializer.Deserialize(stream) as GameOptions;
+                }
+            }
+            else
+                return new GameOptions();
+        }
+
     }
 }
