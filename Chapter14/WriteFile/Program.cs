@@ -2,7 +2,6 @@
 using System.Text;
 using System.IO;
 
-
 namespace WriteFile
 {
     class Program
@@ -13,15 +12,16 @@ namespace WriteFile
             char[] charData;
             try
             {
-                FileStream aFile = new FileStream("Temp.txt", FileMode.Create);
-                charData = "My pink half of the drainpipe.".ToCharArray();
-                byteData = new byte[charData.Length];
-                Encoder e = Encoding.UTF8.GetEncoder();
-                e.GetBytes(charData, 0, charData.Length, byteData, 0, true);
-                // Move file pointer to beginning of file.
-                aFile.Seek(0, SeekOrigin.Begin);
-                aFile.Write(byteData, 0, byteData.Length);
-                aFile.Close();
+                using (FileStream aFile = new FileStream("Temp.txt", FileMode.Create))
+                {
+                    charData = "My pink half of the drainpipe.".ToCharArray();
+                    Encoder e = Encoding.UTF8.GetEncoder();
+                    byteData = new byte[e.GetByteCount(charData, true)];
+                    e.GetBytes(charData, 0, charData.Length, byteData, 0, true);
+                    // Move file pointer to beginning of file.
+                    aFile.Seek(0, SeekOrigin.Begin);
+                    aFile.Write(byteData, 0, byteData.Length);
+                }
             }
             catch (IOException ex)
             {
@@ -30,7 +30,6 @@ namespace WriteFile
                 Console.ReadKey();
                 return;
             }
-
         }
     }
 }
