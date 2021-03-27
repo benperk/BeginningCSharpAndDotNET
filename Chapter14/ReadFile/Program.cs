@@ -12,9 +12,11 @@ namespace ReadFile
             char[] charData = new char[200];
             try
             {
-                FileStream aFile = new FileStream(@"..\..\..\Program.cs", FileMode.Open);
-                aFile.Seek(174, SeekOrigin.Begin);
-                aFile.Read(byteData, 0, 200);
+                using (FileStream aFile = new FileStream(@"..\..\..\Program.cs", FileMode.Open))
+                {
+                    aFile.Seek(88, SeekOrigin.Begin);
+                    aFile.Read(byteData, 0, 200);
+                }
             }
             catch (IOException e)
             {
