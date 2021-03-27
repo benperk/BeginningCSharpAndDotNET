@@ -1,0 +1,80 @@
+﻿@page "/"
+@inject HttpClient Http
+@using Newtonsoft.Json;
+@using System.IO;
+@using Microsoft.AspNetCore.Components.Rendering
+
+<h1>BensCards: a new and exciting card game.</h1>
+<br />
+Enter your name:
+<input type="text" @bind="player.PlayerName" />
+<br />
+<br />
+<button @onclick="PostRequest">Deal Cards</button>
+<br />
+<br />
+<h2>@playerName</h2>
+<br />
+<p>@responseBody</p>
+@if (cards.Count > 0)
+{
+    ShowHand(__builder);
+    cards.Clear();
+}
+
+@code{
+
+    private string responseBody;
+    private string playerName;
+    Player player = new Player();
+    List<string> cards = new List<string>();
+
+    private async Task PostRequest()
+    {
+        try
+        {
+            var requestMessage = new HttpRequestMessage()
+            {
+                Method = new HttpMethod("POST"),
+                RequestUri =
+                new Uri("https://localhost:44348/api/HandOfCards/"
+                   + player.PlayerName),
+                Content =
+                JsonContent.Create(new Player
+                {
+                    PlayerName = $"{player.PlayerName}"
+                })
+            };
+            var response = await Http.SendAsync(requestMessage);
+            playerName = $"{player.PlayerName}, here are your cards.";
+            Stream stream = await response.Content.ReadAsStreamAsync();
+            StreamReader reader = new StreamReader(stream);
+            var results = JsonConvert.DeserializeObject<dynamic>(reader.ReadLine());
+            reader.Close();
+            foreach (var card in results)
+            {
+                cards.Add((string)card.imageLink);
+            }
+        }
+        catch (Exception ex)
+        {
+            responseBody = ex.Message + " - " + ex.StackTrace;
+        }
+    }
+    private void ShowHand(RenderTreeBuilder __builder)
+    {
+        <div>
+            @foreach (string card in cards)
+            {
+                <img width="75"
+                     height="100"
+                     alt="cardImage"
+                     src="https://deckofcards.blob.core.windows.net/carddeck/@card" />
+            }
+        </div>
+    }
+    public class Player
+    {
+        public string PlayerName { get; set; }
+    }
+}

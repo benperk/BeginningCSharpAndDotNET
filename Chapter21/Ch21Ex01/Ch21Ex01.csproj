@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Delete_black_32x32.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Delete_black_32x32.png" />
+  </ItemGroup>
+
+</Project>

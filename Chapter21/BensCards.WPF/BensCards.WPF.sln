@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BensCards.WPF", "BensCards.WPF.csproj", "{49000D3C-22BD-469B-80B3-46F2F62CFAFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch13CardLib", "..\Ch13CardLib\Ch13CardLib.csproj", "{2EA1CB17-49B0-49CC-9F8C-340568927644}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49000D3C-22BD-469B-80B3-46F2F62CFAFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49000D3C-22BD-469B-80B3-46F2F62CFAFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49000D3C-22BD-469B-80B3-46F2F62CFAFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49000D3C-22BD-469B-80B3-46F2F62CFAFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EA1CB17-49B0-49CC-9F8C-340568927644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EA1CB17-49B0-49CC-9F8C-340568927644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EA1CB17-49B0-49CC-9F8C-340568927644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EA1CB17-49B0-49CC-9F8C-340568927644}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD865931-D9B7-4925-B407-22F876496D3B}
+	EndGlobalSection
+EndGlobal

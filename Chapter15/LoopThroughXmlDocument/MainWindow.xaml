@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LoopThroughXmlDocument"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="350" Width="525" >
     <Grid>
-
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2">
+            <TextBlock HorizontalAlignment="Stretch" Margin="10,10,100,10" TextWrapping="Wrap" Text="" VerticalAlignment="Stretch" x:Name="textBlockResults"/>
+        </ScrollViewer>
+        <Button Content="Loop" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="75" x:Name="buttonLoop" Click="buttonLoop_Click" Grid.Column="1"/>
+        <Button Content="Create" HorizontalAlignment="Right" Margin="0,34,10,0" VerticalAlignment="Top" Width="75" x:Name="buttonCreateNode" Click="buttonCreateNode_Click" Grid.Column="1"/>
+        <Button Content="Delete" HorizontalAlignment="Right" Margin="0,57,10,0" VerticalAlignment="Top" Width="75" x:Name="buttonDeleteNode" Click="buttonDeleteNode_Click" Grid.Column="1"/>
     </Grid>
 </Window>
