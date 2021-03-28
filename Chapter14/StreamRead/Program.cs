@@ -11,16 +11,19 @@ namespace StreamRead
             string line;
             try
             {
-                FileStream aFile = new FileStream("Log.txt", FileMode.Open);
-                StreamReader sr = new StreamReader(aFile);
-                line = sr.ReadLine();
-                // Read data in line by line.
-                while (line != null)
+                using (FileStream aFile = new FileStream("Log.txt", FileMode.Open))
                 {
-                    WriteLine(line);
-                    line = sr.ReadLine();
+                    using (StreamReader sr = new StreamReader(aFile))
+                    {
+                        line = sr.ReadLine();
+                        // Read data in line by line.
+                        while (line != null)
+                        {
+                            WriteLine(line);
+                            line = sr.ReadLine();
+                        }
+                    }
                 }
-                sr.Close();
             }
             catch (IOException e)
             {
@@ -28,8 +31,6 @@ namespace StreamRead
                 WriteLine(e.ToString());
                 return;
             }
-            ReadKey();
-
         }
     }
 }
