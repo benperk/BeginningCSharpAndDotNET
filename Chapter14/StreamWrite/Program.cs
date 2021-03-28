@@ -9,16 +9,19 @@ namespace StreamWrite
         {
             try
             {
-                FileStream aFile = new FileStream("Log.txt", FileMode.OpenOrCreate);
-                StreamWriter sw = new StreamWriter(aFile);
-                bool truth = true;
-                // Write data to file.
-                sw.WriteLine("Hello to you.");
-                sw.Write($"It is now {DateTime.Now.ToLongDateString()}");
-                sw.Write("and things are looking good.");
-                sw.Write("More than that,");
-                sw.Write($" it's {truth} that C# is fun.");
-                sw.Close();
+                using (FileStream aFile = new FileStream("Log.txt", FileMode.OpenOrCreate))
+                {
+                    using (StreamWriter sw = new StreamWriter(aFile))
+                    {
+                        bool truth = true;
+                        // Write data to file.
+                        sw.WriteLine("Hello to you.");
+                        sw.Write($"It is now {DateTime.Now.ToLongDateString()}");
+                        sw.Write("and things are looking good.");
+                        sw.Write("More than that,");
+                        sw.Write($" it's {truth} that C# is fun.");
+                    }
+                }
             }
             catch (IOException e)
             {
@@ -27,7 +30,6 @@ namespace StreamWrite
                 Console.ReadLine();
                 return;
             }
-
         }
     }
 }
