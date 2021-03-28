@@ -10,30 +10,39 @@ namespace Compressor
     {
         static void SaveCompressedFile(string filename, string data)
         {
-            FileStream fileStream =
-               new FileStream(filename, FileMode.Create, FileAccess.Write);
-            GZipStream compressionStream =
-               new GZipStream(fileStream, CompressionMode.Compress);
-            StreamWriter writer = new StreamWriter(compressionStream);
-            writer.Write(data);
-            writer.Close();
+            using (FileStream fileStream =
+               new FileStream(filename, FileMode.Create, FileAccess.Write))
+            {
+                using (GZipStream compressionStream = new GZipStream(fileStream, CompressionMode.Compress))
+                {
+                    using (StreamWriter writer = new StreamWriter(compressionStream))
+                    {
+                        writer.Write(data);
+                    }
+                }
+            }
         }
         static string LoadCompressedFile(string filename)
         {
-            FileStream fileStream =
-               new FileStream(filename, FileMode.Open, FileAccess.Read);
-            GZipStream compressionStream =
-               new GZipStream(fileStream, CompressionMode.Decompress);
-            StreamReader reader = new StreamReader(compressionStream);
-            string data = reader.ReadToEnd();
-            reader.Close();
-            return data;
+            using (FileStream fileStream =
+               new FileStream(filename, FileMode.Open, FileAccess.Read))
+            {
+                using (GZipStream compressionStream =
+                   new GZipStream(fileStream, CompressionMode.Decompress))
+                {
+                    using (StreamReader reader = new StreamReader(compressionStream))
+                    {
+                        string data = reader.ReadToEnd();
+                        return data;
+                    }
+                }
+            }
         }
         static void Main(string[] args)
         {
             try
             {
-                string filename = "compressedFile.txt";
+                string filename = "compressedFile.gz";
                 WriteLine(
                    "Enter a string to compress (will be repeated 100 times):");
                 string sourceString = ReadLine();
@@ -54,7 +63,6 @@ namespace Compressor
                 recoveredString = recoveredString.Substring(
                    0, recoveredString.Length / 100);
                 WriteLine($"\nRecovered data: {recoveredString}", recoveredString);
-                ReadKey();
             }
             catch (IOException ex)
             {
