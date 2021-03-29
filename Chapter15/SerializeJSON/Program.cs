@@ -16,9 +16,21 @@ namespace SerializeJSON
         static void Main(string[] args)
         {
             List<Book> books = new List<Book>();
-            Book book1 = new Book { title = "Beginning C# and .NET", author = "Benjamin Perkins and Jon Reid", code = "978-1119795780" };
-            Book book2 = new Book { title = "Beginning XML", author = "Joe Fawcett et al", code = "978-1118162132" };
-            Book book3 = new Book { title = "Professional C# 7 and .NET Core", author = "Christian Nagel", code = "978-1119449270" };
+            Book book1 = new Book { 
+                title = "Beginning C# and .NET", 
+                author = "Benjamin Perkins and Jon Reid", 
+                code = "978-1119795780" 
+            };
+            Book book2 = new Book { 
+                title = "Beginning XML", 
+                author = "Joe Fawcett et al", 
+                code = "978-1118162132" 
+            };
+            Book book3 = new Book { 
+                title = "Professional C# 7 and .NET Core", 
+                author = "Christian Nagel", 
+                code = "978-1119449270" 
+            };
 
             books.Add(book1);
             books.Add(book2);
