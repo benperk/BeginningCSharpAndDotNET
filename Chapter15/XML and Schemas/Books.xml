@@ -9,10 +9,4 @@
     <author>Joe Fawcett et al</author>
     <code>978-1118162132</code>
   </book>
-  <book>
-    <!--the Professional edition-->
-    <title>Professional C# 7 and .NET Core</title>
-    <author>Christian Nagel</author>
-    <code>978-1119449270</code>
-  </book>
 </books>
