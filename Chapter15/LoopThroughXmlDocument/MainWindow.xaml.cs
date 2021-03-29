@@ -128,7 +128,7 @@ namespace LoopThroughXmlDocument
             // Get the root element.
             XmlElement root = document.DocumentElement;
 
-            // Find the node. root is the <books> tag, so its last child
+            // Find the node. root is the <books> tag, find its last child
             // which will be the last <book> node.
             if (root.HasChildNodes)
             {
