@@ -23,7 +23,6 @@ namespace BeginningCSharpAndDotNET_16_6_LargeNumberQuery
                 WriteLine(item);
             }
             Write("Program finished, press Enter/Return to continue:");
-            ReadLine();
         }
 
         private static int[] generateLotsOfNumbers(int count)

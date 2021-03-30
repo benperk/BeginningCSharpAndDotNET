@@ -38,11 +38,10 @@ namespace BeginningCSharpAndDotNET_16_2_XMLFragments
 
             XElement xcust2 = XElement.Load(xmlFileName);
 
-            WriteLine("Contents of xcust:");
-            WriteLine(xcust);
+            WriteLine("Contents of xcust2:");
+            WriteLine(xcust2);
 
             Write("Program finished, press Enter/Return to continue:");
-            ReadLine();
         }
     }
 }

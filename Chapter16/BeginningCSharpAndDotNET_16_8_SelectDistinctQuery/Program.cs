@@ -53,7 +53,6 @@ namespace BeginningCSharpAndDotNET_16_8_SelectDistinctQuery
                 WriteLine(item);
             }
             Write("Program finished, press Enter/Return to continue:");
-            ReadLine();
         }
     }
 }

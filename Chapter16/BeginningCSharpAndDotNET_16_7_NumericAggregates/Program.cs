@@ -35,7 +35,6 @@ namespace BeginningCSharpAndDotNET_16_7_NumericAggregates
             WriteLine(queryResults.Sum(n => (long)n));
 
             Write("Program finished, press Enter/Return to continue:");
-            ReadLine();
         }
 
         private static int[] generateLotsOfNumbers(int count)

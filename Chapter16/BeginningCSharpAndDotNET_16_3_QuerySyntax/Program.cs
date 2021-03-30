@@ -22,7 +22,6 @@ namespace BeginningCSharpAndDotNET_16_3_QuerySyntax
             }
 
             Write("Program finished, press Enter/Return to continue:");
-            ReadLine();
         }
     }
 }

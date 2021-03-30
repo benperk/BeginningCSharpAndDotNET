@@ -69,7 +69,6 @@ namespace BeginningCSharpAndDotNET_16_11_JoinQuery
             }
 
             Write("Program finished, press Enter/Return to continue:");
-            ReadLine();
         }
     }
 }

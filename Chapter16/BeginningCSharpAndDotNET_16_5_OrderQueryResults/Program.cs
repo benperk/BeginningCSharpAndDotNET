@@ -23,7 +23,6 @@ namespace BeginningCSharpAndDotNET_16_5_OrderQueryResults
             }
 
             Write("Program finished, press Enter/Return to continue:");
-            ReadLine();
         }
     }
 }

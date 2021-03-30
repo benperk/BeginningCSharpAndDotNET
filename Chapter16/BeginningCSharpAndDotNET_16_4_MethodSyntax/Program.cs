@@ -19,7 +19,6 @@ namespace BeginningCSharpAndDotNET_16_4_MethodSyntax
             }
 
             Write("Program finished, press Enter/Return to continue:");
-            ReadLine();
 
         }
     }

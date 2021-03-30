@@ -51,7 +51,6 @@ namespace BeginningCSharpAndDotNET_16_9_MultiLevelOrdering
                 WriteLine(item);
             }
             Write("Program finished, press Enter/Return to continue:");
-            ReadLine();
         }
     }
 }

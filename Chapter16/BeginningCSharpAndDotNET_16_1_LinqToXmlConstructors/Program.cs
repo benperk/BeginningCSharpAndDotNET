@@ -36,7 +36,6 @@ namespace BeginningCSharpAndDotNET_16_1_LinqToXmlConstructors
             WriteLine(xdoc);
 
             Write("Program finished, press Enter/Return to continue:");
-            ReadLine();
         }
     }
 }

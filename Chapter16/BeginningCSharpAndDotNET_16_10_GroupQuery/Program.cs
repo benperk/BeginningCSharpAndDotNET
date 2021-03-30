@@ -59,7 +59,6 @@ namespace BeginningCSharpAndDotNET_16_10_GroupQuery
                     WriteLine($"{item.TotalSales}\t: {item.Region}");
                 }
                 Write("Program finished, press Enter/Return to continue:");
-                ReadLine();
             }
         }
 }
