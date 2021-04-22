@@ -1,4 +1,4 @@
-# Beginning C# and .NET
+# Beginning C# and .NET 2021
 The code and descriptions found in this repository apply to C# and .NET. You don't need anything other than .NET to understand the contents of the associated book, but many of the examples require a development tool. The code stored here was writtten using Visual Studio Community as its primary development tool.  Use Visual Studio Community to create Windows, cloud and cross platform applications as well as SQL Server Express for applications that access databases. Some functionality is available only in Visual Studio, but this won't stop you from working through any of the examples in this book.
 
 Code samples are available for these chapters:
@@ -20,6 +20,6 @@ Code samples are available for these chapters:
 * Chapter 16: LINQ
 * Chapter 17: Databases
 * Chapter 18: .NET and ASP.NET
-* Chapter 19: Basic REST API programming
-* Chapter 20: Basic Cloud Programming
+* Chapter 19: Basic Cloud Programming
+* Chapter 20: Basic Web API and WCF programming
 * Chapter 21: Basic Desktop Programming
