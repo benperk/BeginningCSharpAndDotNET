@@ -8,7 +8,7 @@ namespace Ch03Ex02
         {
             double firstNumber, secondNumber;
             string userName;
-            Console.WriteLine("Enter your name:");
+            Console.WriteLine("Enter your name, please:");
             userName = Console.ReadLine();
             Console.WriteLine($"Welcome {userName}!");
             Console.WriteLine("Now give me a number:");
